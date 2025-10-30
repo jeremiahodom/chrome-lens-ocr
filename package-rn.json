@@ -1,0 +1,64 @@
+{
+  "name": "chrome-lens-ocr",
+  "version": "4.2.0",
+  "description": "Google Lens OCR for React Native - No headless browser, no Google account required",
+  "main": "src/index.js",
+  "react-native": "src/rn.js",
+  "types": "src/types.d.ts",
+  "files": [
+    "./src/*",
+    "README-RN.md"
+  ],
+  "scripts": {
+    "start": "node sharex.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": "./cli.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimdenGD/chrome-lens-ocr.git"
+  },
+  "keywords": [
+    "google",
+    "lens",
+    "chrome",
+    "ocr",
+    "react-native",
+    "react-native-ocr",
+    "mobile",
+    "ios",
+    "android",
+    "text-recognition",
+    "image-to-text",
+    "reverse-engineering",
+    "free"
+  ],
+  "author": "dimden.dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dimdenGD/chrome-lens-ocr/issues"
+  },
+  "homepage": "https://github.com/dimdenGD/chrome-lens-ocr#readme",
+  "dependencies": {
+    "google-protobuf": "^3.21.4",
+    "image-dimensions": "^2.3.0",
+    "set-cookie-parser": "^2.6.0"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.60.0"
+  },
+  "peerDependenciesMeta": {
+    "react-native": {
+      "optional": true
+    }
+  },
+  "optionalDependencies": {
+    "file-type": "^19.0.0",
+    "sharp": "^0.33.2",
+    "undici": "^5.28.3"
+  },
+  "devDependencies": {
+    "clipboardy": "^4.0.0"
+  }
+}
