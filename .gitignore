@@ -1,5 +1,7 @@
 node_modules
 test.js
+test-rn.js
 cookies.json
 afData.json
 bun.lock
+package-rn.json
