@@ -8,6 +8,7 @@
   "files": [
     "./src/*",
     "README-RN.md",
+    "MIGRATION-RN.md",
     "examples-rn.js"
   ],
   "scripts": {
