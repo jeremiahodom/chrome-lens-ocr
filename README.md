@@ -2,12 +2,24 @@
 Library to use Google Lens OCR for free, via API used in Chromium. This doesn't require running a headless browser, and is much faster than using Puppeteer or similar.
 It's set up to work without any options, there's no need to be authorized (no need for Google account!).
 
+**🎉 NEW: React Native support!** See [README-RN.md](README-RN.md) for React Native usage.
+
 ## Installation
+
+### Node.js
 ```bash
 npm install chrome-lens-ocr
 ```
 
+### React Native
+```bash
+npm install chrome-lens-ocr react-native-fs image-dimensions set-cookie-parser google-protobuf
+```
+See [README-RN.md](README-RN.md) for complete React Native setup and usage.
+
 ## Usage
+
+### Node.js
 ```javascript
 import Lens from 'chrome-lens-ocr';
 import { inspect } from 'util';
@@ -20,12 +32,31 @@ lens.scanByBuffer(Buffer.from('...')).then(log).catch(console.error);
 // fetches image and then scans it
 lens.scanByURL('https://lune.dimden.dev/7949f833fa42.png').then(log).catch(console.error);
 ```
+
+### React Native
+```javascript
+import LensRN from 'chrome-lens-ocr/src/rn';
+
+const lens = new LensRN();
+
+// Scan from URL
+const result = await lens.scanRemote('https://example.com/image.jpg');
+
+// Scan from base64
+const result = await lens.scanBase64(base64Data, 'image/jpeg', width, height);
+
+// See README-RN.md for more examples
+```
+
 All methods above return `LensResult` object (see docs below). In case error happened during the process, `LensError` will be thrown.
 
 ![Example output](https://lune.dimden.dev/1454b73026ab.png)
 
 ## API
 All of the classes are exported. `Lens` is the default export, and `LensCore`, `LensResult`, `Segment`, `BoundingBox` and `LensError` are named exports.
+
+**For React Native usage**, import from `chrome-lens-ocr/src/rn` and see [README-RN.md](README-RN.md) for complete documentation.
+
 ### class Lens extends LensCore
 #### `constructor(options?: Object): Lens`
 Creates a new instance of Lens. `options` is optional.

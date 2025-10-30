@@ -1,15 +1,13 @@
 {
   "name": "chrome-lens-ocr",
-  "version": "4.1.1",
-  "description": "Package to use Google Lens OCR for free, via API used in Chrome. Supports Node.js and React Native.",
+  "version": "4.2.0",
+  "description": "Google Lens OCR for React Native - No headless browser, no Google account required",
   "main": "src/index.js",
   "react-native": "src/rn.js",
   "types": "src/types.d.ts",
   "files": [
     "./src/*",
-    "README-RN.md",
-    "MIGRATION-RN.md",
-    "examples-rn.js"
+    "README-RN.md"
   ],
   "scripts": {
     "start": "node sharex.js",
